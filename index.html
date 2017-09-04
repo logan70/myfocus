@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>myFocus v2.0</title>
+<script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>
+<style type="text/css">
+body { background:#fff; padding:20px;}
+h2{height:42px; line-height:42px; background:#f1f1f1; margin-bottom:20px; font-size:12px; color:#666; font-weight:normal;}
+#myFocus{ width:560px; height:300px;}
+.style select{
+  margin-right: 40px;
+}
+
+.clearfix:after{
+  content: " ";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+.clearfix{
+  *zoom: 1;
+}
+</style>
+</head>
+<body>
+<div class="show" style="text-align: center;">
+  <h1>myFocus焦点图插件效果展示</h1>
+</div>
+<div id="myFocus-wrap" class="clearfix"  style="display: table;margin: 0 auto;">
+  <div id="myFocus"><!--焦点图盒子-->
+    <div class="loading"><img src="img/loading.gif" alt="请稍候..." /></div><!--载入画面(可删除)-->
+    <div class="pic"><!--图片列表-->
+    	<ul>
+          <li><a href="#1"><img src="img/1a.jpg" thumb="" alt="图片1来源于网络，版权属于作者" text="图片1更详细的描述文字" /></a></li>
+          <li><a href="#2"><img src="img/2a.jpg" thumb="" alt="版权属于作者，图片2来源于网络" text="图片2更详细的描述文字" /></a></li>
+          <li><a href="#3"><img src="img/3a.jpg" thumb="" alt="图片3来源于网络，版权属于作者" text="图片3更详细的描述文字" /></a></li>
+          <li><a href="#4"><img src="img/4a.jpg" thumb="" alt="版权属于作者，图片4来源于网络" text="图片4更详细的描述文字" /></a></li>
+          <li><a href="#5"><img src="img/5a.jpg" thumb="" alt="图片5来源于网络，版权属于作者" text="图片5更详细的描述文字" /></a></li>
+    	</ul>
+    </div>
+  </div>
+</div>
+<h2>提示：可以修改风格参数以更换不同的风格</h2>
+<p class="style">风格应用选择： 
+  <select id="pattern" onchange=""> 
+    <option selected="" value="mF_51xflash">mF_51xflash</option> 
+    <option value="mF_classicHB">mF_classicHB</option> 
+    <option value="mF_classicHC">mF_classicHC</option> 
+    <option value="mF_dleung">mF_dleung</option> 
+    <option value="mF_expo2010">mF_expo2010</option> 
+    <option value="mF_fancy">mF_fancy</option> 
+    <option value="mF_fscreen_tb">mF_fscreen_tb</option> 
+    <option value="mF_games_tb">mF_games_tb</option> 
+    <option value="mF_kdui">mF_kdui</option> 
+    <option value="mF_kiki">mF_kiki</option> 
+    <option value="mF_ladyQ">mF_ladyQ</option> 
+    <option value="mF_liquid">mF_liquid</option> 
+    <option value="mF_liuzg">mF_liuzg</option> 
+    <option value="mF_luluJQ">mF_luluJQ</option> 
+    <option value="mF_pconline">mF_pconline</option> 
+    <option value="mF_peijianmall">mF_peijianmall</option> 
+    <option value="mF_pithy_tb">mF_pithy_tb</option> 
+    <option value="mF_qiyi">mF_qiyi</option> 
+    <option value="mF_quwan">mF_quwan</option> 
+    <option value="mF_rapoo">mF_rapoo</option> 
+    <option value="mF_shutters">mF_shutters</option> 
+    <option value="mF_slide3D">mF_slide3D</option> 
+    <option value="mF_sohusports">mF_sohusports</option>
+    <option value="mF_taobao2010">mF_taobao2010</option> 
+    <option value="mF_taobaomall">mF_taobaomall</option> 
+    <option value="mF_tbhuabao">mF_tbhuabao</option> 
+    <option value="mF_YSlider">mF_YSlider</option> 
+  </select>
+  <button onclick="apply()" type="submit">应用</button> 
+</p>
+
+<script type="text/javascript">
+
+  var wrap = document.getElementById('myFocus-wrap');//简称
+  var html=wrap.innerHTML;//保存原html
+
+
+
+  function apply(){
+    //还原
+
+    wrap.innerHTML = html;
+
+    //获取下拉选框value
+    var mf = document.getElementById('pattern').value;
+    console.log(html)
+    myFocus.set({
+      id:'myFocus',//ID
+      pattern:mf//风格
+    });
+
+  }
+
+myFocus.set({
+      id:'myFocus',//ID
+      pattern:'mF_51xflash'//风格
+    });
+
+</script>
+</body>
+</html>
