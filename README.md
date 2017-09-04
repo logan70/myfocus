@@ -56,7 +56,7 @@
 
 **参数调用**
 
-```jis
+```js
 //或详细一点的参数调用：
 <script type="text/javascript">
 	myFocus.set({
