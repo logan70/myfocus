@@ -4,6 +4,10 @@
 
 **觉得有用的可以直接Fork或者Clone到本地使用，希望给个Star支持一下**
 
+[myFocus源码](https://github.com/logan70/myfocus "myFocus源码")
+[myFocus效果展示](https://logan70.github.io/myfocus/ "myFocus效果展示")
+[myFocus使用教程](https://logan70.github.io/2017/09/04/how-to-use-myfocus/ "myFocus使用教程")
+
 # myFocus使用步骤
 
 ## Step 1. 在html的标签内引入相关文件
